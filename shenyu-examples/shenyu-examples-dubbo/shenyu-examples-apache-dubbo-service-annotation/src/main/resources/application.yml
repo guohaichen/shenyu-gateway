@@ -28,7 +28,7 @@ shenyu:
     serverLists: http://localhost:9095
     props:
       username: admin
-      password: 123456
+      password: Cgh129911!@
   client:
     dubbo:
       props:

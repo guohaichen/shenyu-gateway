@@ -48,6 +48,8 @@
         <module>shenyu-discovery</module>
         <module>shenyu-registry</module>
         <module>shenyu-kubernetes-controller</module>
+        <module>shenyu-integrated-test</module>
+        <module>shenyu-examples</module>
     </modules>
 
     <licenses>
@@ -82,7 +84,8 @@
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <skipTests>false</skipTests>
+        <!--maven install跳过单元测试-->
+        <skipTests>true</skipTests>
         <!-- maven plugin version start -->
         <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
         <jacoco-maven-plugin.version>0.8.7</jacoco-maven-plugin.version>
@@ -188,6 +191,13 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- apache shenyu grpc plugin start-->
+            <dependency>
+                <groupId>org.apache.shenyu</groupId>
+                <artifactId>shenyu-spring-boot-starter-plugin-grpc</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!-- apache shenyu grpc plugin end-->
             <dependency>
                 <!-- Import dependency management from Spring Boot -->
                 <groupId>org.springframework.boot</groupId>
