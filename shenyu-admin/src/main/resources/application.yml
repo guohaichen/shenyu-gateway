@@ -83,9 +83,9 @@ shenyu:
 #      connectionTimeout: 2000
 #    http:
 #      enabled: true
-    nacos:
-      url: localhost:8848
-      namespace: 1c10d748-af86-43b9-8265-75f487d20c6c
+#    nacos:
+#      url: localhost:8848
+#      namespace: public
 #      username:
 #      password:
 #      acm:
